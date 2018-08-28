@@ -1,0 +1,33 @@
+<form [formGroup]="vehicleForm">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="form-group">
+            <label>Vehicle Name</label>
+            <input type="text" placeholder="Enter vehicle name" class="form-control" formControlName="vehicleName"/>
+            <div class="invalid-feedback">Please enter valid name</div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="form-group">
+              <label>Registration No.</label>
+              <input type="text" placeholder="Enter registration no." class="form-control" formControlName="vehicleReg"/>
+              <div class="invalid-feedback">Please enter valid registration no.</div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label>Vehicle Type</label>
+                <select class="custom-select form-control" formControlName="vehicleType">
+                    <option value="">Select vehicle type</option>
+                    <option value="scooty">Scooty</option>
+                    <option value="bike">Bike</option>
+                    <option value="scooter">Scooter</option>
+                  </select>
+                  <div class="invalid-feedback">Choose vehicle type</div>
+            </div>
+          </div>
+    </div>
+    <button type="button" class="btn btn-primary" [disabled]="!vehicleForm.valid" (click)="saveVehicle(vehicleForm)">Save Vehicle</button>
+</form>
+  
+
