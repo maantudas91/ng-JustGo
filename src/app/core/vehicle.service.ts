@@ -13,7 +13,7 @@ export class VehicleService {
   addNewVehicle(payload: any) : Observable<any>{
     return this.http.post(`${environment.apiUrl}add/vehicle`, payload)
                 .pipe(
-                  map( (res: any) => res)
+                  map( (res: Response) => res)
                 );
   }
 
