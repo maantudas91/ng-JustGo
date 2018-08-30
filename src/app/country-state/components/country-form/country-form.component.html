@@ -1,0 +1,7 @@
+<div class="form-group">
+  <label aria-label="">{{country}}</label>
+  <select class="custom-select form-control" [ngModel]="selectedCountry" (ngModelChange)="changeCountry($event)">
+    <option value="">Please choose your country</option>
+    <option *ngFor="let countries of countryList" [value]="countries.name">{{countries.name}}</option>
+  </select>
+</div>
