@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label aria-label="">{{label}}</label>
+    <select class="custom-select form-control" [ngModel]="selectedCity" (ngModelChange)="changeCity($event)">
+      <option value="">Please choose your City</option>
+      <option *ngFor="let city of cityList;let i = index" [value]="city.name">{{city.name}}</option>
+    </select>
+</div>
