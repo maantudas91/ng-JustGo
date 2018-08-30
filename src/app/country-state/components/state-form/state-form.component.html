@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label aria-label="">{{label}}</label>
+    <select class="custom-select form-control" [ngModel]="selectedState" (ngModelChange)="changeState($event)">
+      <option value="">Please choose your State</option>
+      <option *ngFor="let state of stateList[0];let i = index" [value]="state">{{state}}</option>
+    </select>
+</div>
+  
