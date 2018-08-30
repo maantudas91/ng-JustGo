@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from "./views/home/home.component";
 import { AddVehicleComponent } from "./views/add-vehicle/add-vehicle.component";
 import { AddBuComponent } from "./views/add-bu/add-bu.component";
+import { CountryStateModule } from "./country-state/country-state.module";
 
 const routes = [
     { path :'' , component : HomeComponent },
@@ -23,6 +24,7 @@ const routes = [
         RouterModule.forRoot(routes),
         FormsModule,
         ReactiveFormsModule,
+        CountryStateModule,
         CommonModule
     ],
     exports: [RouterModule],
