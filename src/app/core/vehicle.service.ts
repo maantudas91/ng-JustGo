@@ -9,7 +9,6 @@ export class VehicleService {
 
   constructor(private http : HttpClient) { }
 
-
   addNewVehicle(payload: any) : Observable<any>{
     return this.http.post(`${environment.apiUrl}add/vehicle`, payload)
                 .pipe(

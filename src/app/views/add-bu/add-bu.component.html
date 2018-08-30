@@ -1,35 +1,20 @@
 <form [formGroup]="buForm">
-  <div class="row">
-      <div class="col-sm-12 col-md-6">
-        <div class="form-group">
-          <label>Address 1</label>
-          <input type="text" placeholder="Enter vehicle name" class="form-control" formControlName="name"/>
-          <div class="invalid-feedback">Please enter valid name</div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6">
-        <div class="form-group">
-            <label>Address 2</label>
-            <input type="text" placeholder="Enter registration no." class="form-control" formControlName="reg_no"/>
-            <div class="invalid-feedback">Please enter valid registration no.</div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6">
-          <div class="form-group">
-              <label>Vehicle Type</label>
-              <select class="custom-select form-control" formControlName="vehicle_type">
-                  <option value="">Select vehicle type</option>
-                  <option value="scooty">Scooty</option>
-                  <option value="bike">Bike</option>
-                  <option value="scooter">Scooter</option>
-                </select>
-                <div class="invalid-feedback">Choose vehicle type</div>
-          </div>
-        </div>
-  </div>
-
   
     <div class="row" formGroupName="address">
+        <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label>Address 1</label>
+                    <input type="text" placeholder="Enter address 1" class="form-control" formControlName="address1"/>
+                </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label>Address 2</label>
+                    <input type="text" placeholder="Enter address 1" class="form-control" formControlName="address2"/>
+                </div>
+        </div>
+        
         <div class="col-sm-12 col-md-6">
             <app-country-form [country]="'Country list'" formControlName="country"></app-country-form>
         </div>
@@ -42,6 +27,15 @@
             <app-city-form formControlName="city"></app-city-form>
         </div>
         
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" formControlName="description"></textarea>
+            </div>
+        </div>
     </div>
   <button type="button" class="btn btn-primary" [disabled]="!buForm.valid" (click)="saveBU(buForm)">Save Business Unit</button>
 </form>

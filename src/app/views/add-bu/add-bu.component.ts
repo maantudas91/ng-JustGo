@@ -18,14 +18,14 @@ export class AddBuComponent implements OnInit {
 
   initForm(){
     this.buForm = this.fb.group({
-      name : new FormControl('', [Validators.required]),
-      reg_no : new FormControl('', [Validators.required]),
-      vehicle_type : new FormControl('', [Validators.required]),
       address : new FormGroup({
-        state : new FormControl('',[Validators.required]),
-        country : new FormControl('',[Validators.required]),
-        city : new FormControl('',[Validators.required])
-      })
+        address1 : new FormControl('', [Validators.required]),
+        address2 : new FormControl('', [Validators.required]),
+        state : new FormControl('', [Validators.required]),
+        country : new FormControl('', [Validators.required]),
+        city : new FormControl('', [Validators.required])
+      }),
+      description : new FormControl('')
     });
   }
 
